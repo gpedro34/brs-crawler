@@ -8,6 +8,7 @@ Burst Reference Software Network Crawler, detects network nodes by crawling from
 ## Run
 ```shell
 $ npm install
+$ mysql <init.sql
 $ node app.js
 ```
 
