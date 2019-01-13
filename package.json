@@ -1,0 +1,22 @@
+{
+	"name": "brs-crawler",
+	"version": "0.0.1",
+	"description": "BRS Network Crawler",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"burst",
+		"brs",
+		"network",
+		"crawler"
+	],
+	"author": "chrulri",
+	"license": "GPL-3.0-or-later",
+	"dependencies": {
+		"request": "^2.88.0",
+		"request-promise-native": "^1.0.5",
+		"mysql2": "^1.6.4"
+	}
+}
