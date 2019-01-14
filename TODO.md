@@ -1,9 +1,12 @@
 # TODO
+- Implement getMiningInfo API call to retrieve generationSignature (to enable forks tracking) - save last 10 blocks to db would be great
 - JSON validation of data received by nodes
 - Historic tracking
 - Uptime calculations incl. rotation/compression of old historic data
 - Measure RTT (Round trip time)
-- Locate nodes based on IP (Country only?)
+- Locate nodes based on IP (Country + City)
+- Check if a wallet is public (try to reach port 8125 - a boolean is enough in DB)
+- If wallet is public then do SSL confirmation (save if it has cert and if it is valid - 2 booleans are enough in DB)
 - Public API service serving data from shared database
 - Frontend/UI using data from public API
 - Unit Testing
