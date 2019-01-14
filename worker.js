@@ -10,6 +10,7 @@ assert(cluster.isWorker);
 console.log(`>>Worker ${process.pid} booting...`);
 
 const BRS_USER_AGENT = process.env.BRS_USER_AGENT || defaults.crawler.brsUserAgent;
+const BRS_TIMEOUT = process.env.BRS_TIMEOUT || defaults.crawler.timeout;
 const RESCAN_INTERVAL = process.env.RESCAN_INTERVAL || defaults.crawler.rescanInterval;
 
 const db = require('mysql2/promise').createPool({
@@ -23,7 +24,7 @@ const db = require('mysql2/promise').createPool({
 const p2p = new peers(db);
 
 const scanLoop = setInterval(() => {
-	p2p.scan(BRS_USER_AGENT, RESCAN_INTERVAL);
+	p2p.scan(BRS_USER_AGENT, BRS_TIMEOUT, RESCAN_INTERVAL);
 }, 500);
 
 process.on('SIGINT', () => {
@@ -37,4 +38,3 @@ process.on('SIGINT', () => {
 });
 
 console.log(`>>Worker ${process.pid} UP`);
-

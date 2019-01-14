@@ -1,11 +1,14 @@
-//Crawler configuration
+'use strict';
+
+// Crawler configuration
 exports.crawler = {
 	"threadsPerCPU": 1,
 	"rescanInterval": 15,
-	"brsUserAgent": "BRS/2.2.7",				//BRS version to fake in the API calls
-	"P2PTimeout": 3000									//if getInfo API call this is ignored
+	"brsUserAgent": "BRS/9.9.9",
+	"timeout": 10000
 };
-//MariaDB connection configuration
+
+// MariaDB connection configuration
 exports.mariadb = {
 	"host": "localhost",
 	"port": 3306,
