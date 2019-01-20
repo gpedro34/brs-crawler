@@ -3,7 +3,6 @@
 - JSON validation of data received by nodes
 - Historic tracking
 - Uptime calculations incl. rotation/compression of old historic data
-- Measure RTT (Round trip time)
 - Locate nodes based on IP (Country + City)
 - Check if a wallet is public (try to reach port 8125 - a boolean is enough in DB)
 - If wallet is public then do SSL confirmation (save if it has cert and if it is valid - 2 booleans are enough in DB)
