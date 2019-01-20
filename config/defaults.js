@@ -2,7 +2,7 @@
 
 // Crawler configuration
 exports.crawler = {
-	"threadsPerCPU": 1,
+	"threadsPerCPU": 11,
 	"rescanInterval": 15,
 	"brsUserAgent": "BRS/9.9.9",
 	"timeout": 10000
