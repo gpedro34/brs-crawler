@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS peers (
 	last_scanned TIMESTAMP NULL,
 	last_rtt SMALLINT UNSIGNED NULL,
 	last_peers_count SMALLINT UNSIGNED NULL,
+	last_block_height INT UNSIGNED NULL,
 	CONSTRAINT peers_pk PRIMARY KEY (address)
 )
 ENGINE=InnoDB
