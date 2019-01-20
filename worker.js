@@ -19,6 +19,7 @@ const db = require('mysql2/promise').createPool({
 	user: process.env.DB_USER || defaults.mariadb.user,
 	password: process.env.DB_PASS || utils.readFileTrim(__dirname + '/.db.passwd') || defaults.mariadb.pass,
 	database: process.env.DB_NAME || defaults.mariadb.name,
+	connectionLimit: 3,
 	//supportBigNumbers: true,
 });
 const p2p = new peers(db);
