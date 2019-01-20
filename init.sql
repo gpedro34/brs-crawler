@@ -5,27 +5,41 @@
 --GRANT ALL PRIVILEGES ON brs_crawler.* TO 'brs_crawler'@'localhost';
 
 use brs_crawler;
+
 -- peers table
 CREATE TABLE IF NOT EXISTS peers (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	address VARCHAR(100) NOT NULL,
 	blocked SMALLINT UNSIGNED DEFAULT 0 NOT NULL,
-	version VARCHAR(10) NULL,
-	platform VARCHAR(100) NULL,
 	first_seen TIMESTAMP DEFAULT CURRENT_TIMESTAMP() NOT NULL,
 	last_seen TIMESTAMP DEFAULT CURRENT_TIMESTAMP() NOT NULL,
-	last_reached TIMESTAMP NULL,
 	last_scanned TIMESTAMP NULL,
-	last_rtt SMALLINT UNSIGNED NULL,
-	last_peers_count SMALLINT UNSIGNED NULL,
-	last_block_height INT UNSIGNED NULL,
-	CONSTRAINT peers_pk PRIMARY KEY (address)
+	CONSTRAINT peers_pk PRIMARY KEY (id),
+	CONSTRAINT peers_address_uk UNIQUE KEY (address)
 )
+AUTO_INCREMENT=1
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_general_ci;
---CREATE INDEX peers_version_idx USING BTREE ON peers (version);
---CREATE INDEX peers_platform_idx USING BTREE ON peers (platform);
+
+-- scans table
+CREATE TABLE IF NOT EXISTS scans (
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	peer_id INT UNSIGNED NOT NULL,
+	ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP() NOT NULL,
+	result SMALLINT UNSIGNED NOT NULL,
+	rtt SMALLINT UNSIGNED NULL,
+	version VARCHAR(10) NULL,
+	platform VARCHAR(100) NULL,
+	peers_count SMALLINT UNSIGNED NULL,
+	block_height INT UNSIGNED NULL,
+	CONSTRAINT scans_pk PRIMARY KEY (id),
+	CONSTRAINT scans_peer_id_fk FOREIGN KEY (peer_id) REFERENCES peers(id) ON DELETE CASCADE ON UPDATE CASCADE
+)
+AUTO_INCREMENT=1
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
 
 -- insert bootstrap peer(s)
 INSERT peers (address) VALUES ('wallet.burst-alliance.org:8123') ON DUPLICATE KEY UPDATE last_scanned=NULL;
-
