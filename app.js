@@ -14,7 +14,6 @@ process.on('SIGINT', () => {
 	console.log(`>>Master ${process.pid} exiting...`);
 	cluster.disconnect(() => {
 		console.log(`>>Master DOWN`);
-		process.exit();
 	});
 });
 
