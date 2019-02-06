@@ -1,0 +1,15 @@
+[Unit]
+Description=brs-crawler.js
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/brs-crawler
+Environment=WORKERS=10
+Environment=RESCAN_INTERVAL=5
+User=brs
+Type=simple
+ExecStart=/usr/bin/node app.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
