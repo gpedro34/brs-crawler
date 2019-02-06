@@ -12,11 +12,11 @@ $ mysql <init.sql
 $ node app.js
 ```
 
-#### Change number of threads per CPU used
+#### Change number of workers used
 ```shell
-$ THREADS_PER_CPU=5 node app.js
+$ WORKERS=5 node app.js
 ```
-*(Default: 10)*
+*(Default: 11)*
 
 ## Contribute
 See [TODO.md](TODO.md) for open tasks.
