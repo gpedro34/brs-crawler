@@ -2,10 +2,11 @@
 
 // Crawler configuration
 exports.crawler = {
-	"workers": 11,
+	"workers": 10,
 	"rescanInterval": 15,
 	"brsUserAgent": "BRS/9.9.9",
-	"timeout": 10000
+	"timeout": 10000,
+	"useUtilsCrawler": false
 };
 
 // MariaDB connection configuration
