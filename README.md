@@ -1,5 +1,5 @@
 # BRS Crawler
-Burst Reference Software Network Crawler, detects network nodes by crawling from peer to peer.
+Burst Reference Software Network Crawler, detects network nodes by crawling from peer to peer. This project is forked from [chrulri brs-crawler repo](https://github.com/chrulri/brs-crawler) with the intention to finish implementing the add-on [utils-crawler](https://github.com/gpedro34/utils-crawler) developped by me.
 
 ## Requirements
 - Storage: MariaDB (tested with 10.1)
