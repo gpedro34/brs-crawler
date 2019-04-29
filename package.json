@@ -5,6 +5,7 @@
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js",
+		"test": "echo Tests yet to be written!",
 		"check-pretty": "prettier \"**/*.*\" -c --config .prettierrc.yml",
 		"eslint": "npx eslint \"**/*.*\"",
 		"eslint-fix": "npx eslint --fix \"**/*.*\"",
