@@ -4,7 +4,13 @@
 	"description": "BRS Network Crawler",
 	"main": "app.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "node app.js",
+		"check-pretty": "prettier \"**/*.*\" -c --config .prettierrc.yml",
+		"eslint": "npx eslint \"**/*.*\"",
+		"eslint-fix": "npx eslint --fix \"**/*.*\"",
+		"pretty-fix": "prettier \"**/*.*\" --write -c --config .prettierrc.yml",
+		"lint": "echo Prettier check... && npm run check-pretty && echo Done! && echo ESLint check... && npm run eslint && echo Done! Checked everything!!!",
+		"lint-fix": "echo Prettier fix... && npm run pretty-fix && echo Done! ESLint fix... && npm run eslint-fix && echo Done! Ran and fixed all autofixable issues!"
 	},
 	"keywords": [
 		"burst",
@@ -19,5 +25,11 @@
 		"request-promise-native": "^1.0.5",
 		"mysql2": "^1.6.4",
 		"jsonschema": "^1.2.4"
+	},
+	"devDependencies": {
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^4.2.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"prettier": "^1.17.0"
 	}
 }
