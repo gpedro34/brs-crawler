@@ -1,0 +1,8 @@
+LICENSE
+
+*ignore
+*.json
+*.md
+*.log
+*.txt
+*.key
