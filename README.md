@@ -5,6 +5,8 @@ Burst Reference Software Network Crawler, detects network nodes by crawling from
 - Storage: MariaDB (tested with 10.1)
 - Runtime: NodeJS (tested with 11.6)
 
+[![Build Status](https://travis-ci.com/gpedro34/brs-crawler.svg?branch=develop)](https://travis-ci.com/gpedro34/brs-crawler)
+
 ## Run
 ```shell
 $ npm install
