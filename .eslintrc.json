@@ -35,6 +35,7 @@
 		],
 		"semi": ["warn", "always"],
 		"no-console": ["off", {}],
+		"no-case-declarations": ["off", {}],
 		"prefer-destructuring": [
 			"warn",
 			{

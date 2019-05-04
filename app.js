@@ -16,7 +16,7 @@ process.on('SIGINT', () => {
 	});
 });
 
-cluster.setupMaster({exec: 'worker.js'});
+cluster.setupMaster({ exec: 'worker.js' });
 cluster.on('exit', (worker, code, signal) => {
 	console.log(`>>Worker ${worker.process.pid} EXIT ${code}/${signal}`);
 });
