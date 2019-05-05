@@ -25,7 +25,8 @@
 		"request": "^2.88.0",
 		"request-promise-native": "^1.0.5",
 		"mysql2": "^1.6.4",
-		"jsonschema": "^1.2.4"
+		"jsonschema": "^1.2.4",
+		"exit": "^0.1.2"
 	},
 	"devDependencies": {
 		"eslint": "^5.16.0",
