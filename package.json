@@ -29,7 +29,7 @@
     "mysql2": "^1.6.4",
     "jsonschema": "^1.2.4",
     "exit": "^0.1.2",
-    "snyk": "^1.189.0"
+    "snyk": "^1.226.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
