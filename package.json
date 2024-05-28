@@ -26,10 +26,10 @@
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
-    "mysql2": "^1.6.4",
+    "mysql2": "^3.9.8",
     "jsonschema": "^1.2.4",
     "exit": "^0.1.2",
-    "snyk": "^1.230.5"
+    "snyk": "^1.996.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
