@@ -24,15 +24,15 @@
   "author": "chrulri",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "request-promise-native": "^1.0.5",
-    "mysql2": "^1.6.4",
+    "mysql2": "^3.9.8",
     "jsonschema": "^1.2.4",
     "exit": "^0.1.2",
-    "snyk": "^1.230.5"
+    "snyk": "^1.1299.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^9.36.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.17.0"
